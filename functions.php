@@ -1,4 +1,5 @@
 <?php
+add_filter('use_block_editor_for_post', '__return_false');
 add_theme_support('post-thumbnails');
 function sh_the_content_by_id($post_id = 0, $more_link_text = null, $stripteaser = false)
 {

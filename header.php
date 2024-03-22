@@ -85,7 +85,7 @@
                                         ?>
                                         <?php foreach ($cat_parents as $item) { ?>
                                             <li>
-                                                <a href="<?php echo home_url(); ?>/<?php echo $item->slug; ?>"><?php echo $item->name; ?></a>
+                                                <a href="<?php echo home_url(); ?>/nuestros-servicios?categoria=<?php echo $item->slug; ?>"><?php echo $item->name; ?></a>
                                                 <ul>
                                                     <?php
                                                     $args =  array(

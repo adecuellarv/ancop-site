@@ -43,40 +43,33 @@
     <section id="section-about" class="no-top z-index100">
         <div class="container">
             <div class="row">
-
-                <div class="col-md-6" data-wow-delay=".2s">
-                    <figure class="pic-hover hover-scale mt-40 mb20">
-                        <span class="center-xy">
-                            <a class="image-popup" href="<?php bloginfo('template_url'); ?>/images/misc/pic_1.jpg">
-                                <i class="fa fa-image btn-action btn-action-hide"></i></a>
-                        </span>
-                        <span class="bg-overlay"></span>
-                        <img src="<?php bloginfo('template_url'); ?>/images/misc/pic_1.jpg" class="img-responsive" alt="">
-                    </figure>
-                    <h3>BIMP</h3>
-                    <p>
-                        A construction project must fit into the legal framework governing the property. These include governmental regulations on the use of property and obligations that are created in the process of construction.
-                        <br>
-                        <a href="#" class="read_more mt10">Ver más <i class="fa fa-chevron-right id-color"></i></a>
-                    </p>
-                </div>
-
-                <div class="col-md-6">
-                    <figure class="pic-hover hover-scale mt-40 mb20">
-                        <span class="center-xy">
-                            <a class="image-popup" href="<?php bloginfo('template_url'); ?>/images/misc/pic_3.jpg">
-                                <i class="fa fa-image btn-action btn-action-hide"></i></a>
-                        </span>
-                        <span class="bg-overlay"></span>
-                        <img src="<?php bloginfo('template_url'); ?>/images/misc/pic_3.jpg" class="img-responsive" alt="">
-                    </figure>
-                    <h3>Servicio de mantenimiento</h3>
-                    <p>
-                        Our team ensure the building continues to operate in accordance with its design, including replacing elements which are approaching the end of their useful life to make it effective and functioning.
-                        <br>
-                        <a href="#" class="read_more mt10">Ver más <i class="fa fa-chevron-right id-color"></i></a>
-                    </p>
-                </div>
+                <?php
+                $cat_parents = get_terms(array(
+                    'taxonomy' => 'categoria',
+                    'hide_empty' => false,
+                    'parent' => 0
+                ));
+                ?>
+                <?php foreach ($cat_parents as $item) {
+                    $image_cat = get_field('imagen', $item->taxonomy . '_' . $item->term_id);
+                ?>
+                    <div class="col-md-6" data-wow-delay=".2s">
+                        <figure class="pic-hover hover-scale mt-40 mb20">
+                            <span class="center-xy">
+                                <a href="<?php echo home_url(); ?>/nuestros-servicios?categoria=<?php echo $item->slug; ?>">
+                                    <i class="fa fa-arrow-circle-right btn-action btn-action-hide"></i></a>
+                            </span>
+                            <span class="bg-overlay"></span>
+                            <img src="<?php echo $image_cat; ?>" class="img-responsive" style="height: 320px; width:100%; object-fit: cover;" alt="">
+                        </figure>
+                        <h3><?php echo $item->name; ?></h3>
+                        <p >
+                            <?php echo wp_trim_words( $item->description, 30 );?>
+                            <br>
+                            <a href="<?php echo home_url(); ?>/nuestros-servicios?categoria=<?php echo $item->slug; ?>" class="read_more mt10">Ver más <i class="fa fa-chevron-right id-color"></i></a>
+                        </p>
+                    </div>
+                <?php } ?>
 
             </div>
         </div>
