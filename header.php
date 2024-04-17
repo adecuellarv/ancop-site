@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title>Ancorp</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="BuildPro is the most complete constructon and building website template">
+    <meta name="description" content="Ancop BIMB y mantenimiento integral">
     <meta name="keywords" content="construction,multipurpose,onepage,responsive,minimal,bootstrap,theme">
     <meta name="author" content="">
 
@@ -29,6 +29,15 @@
 
     <!-- color scheme -->
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/color.css" type="text/css" id="colors">
+
+    <!-- RS5.0 Main Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/revolution/css/settings.css">
+
+    <!-- RS5.0 Layers and Navigation Styles -->
+    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/revolution/css/layers.css">
+    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/revolution/css/navigation.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
+</head>
 </head>
 
 <body id="homepage">
@@ -72,9 +81,13 @@
                         <nav>
                             <ul id="mainmenu">
                                 <li>
-                                    <a href="<?php echo home_url(); ?>">Inicio</a>
+                                    <a class="<?php if (is_home()) {
+                                                    echo 'active';
+                                                } ?>" href="<?php echo home_url(); ?>">Inicio</a>
                                 </li>
-                                <li><a>Servicios</a>
+                                <li><a class="<?php if (is_page('nuestros-servicios') || is_single()) {
+                                                    echo 'active';
+                                                } ?>">Servicios</a>
                                     <ul>
                                         <?php
                                         $cat_parents = get_terms(array(
@@ -106,7 +119,7 @@
                                                             $titulo = get_the_title();
                                                             $slug = basename(get_permalink($post->ID));
                                                     ?>
-                                                            <li><a href="<?php echo home_url(); ?>/servicios/<?php echo $slug; ?>"><?php echo $titulo; ?></a></li>
+                                                            <li><a style="font-size:12px;" href="<?php echo home_url(); ?>/servicios/<?php echo $slug; ?>"><?php echo $titulo; ?></a></li>
                                                     <?php
                                                         endwhile;
                                                     endif;
@@ -116,11 +129,23 @@
                                         <?php } ?>
                                     </ul>
                                 </li>
-                                <li><a href="#portafolio">Portafolio</a></li>
-                                <li><a href="#clientes">Clientes</a></li>
-                                <li><a href="<?php echo home_url(); ?>/nosotros">Nosotros</a>
+                                <li><a href="<?php if (is_home()) {
+                                                    echo "#portafolio";
+                                                } else {
+                                                    echo home_url() . '#portafolio';
+                                                } ?>">Portafolio</a></li>
+                                <li><a href="<?php if (is_home()) {
+                                                    echo "#clientes";
+                                                } else {
+                                                    echo home_url() . '#clientes';
+                                                } ?>">Clientes</a></li>
+                                <li><a class="<?php if (is_page('nosotros')) {
+                                                    echo 'active';
+                                                } ?>" href="<?php echo home_url(); ?>/nosotros">Nosotros</a>
                                 </li>
-                                <li><a href="<?php echo home_url(); ?>/contacto">Contacto</a></li>
+                                <li><a class="<?php if (is_page('contacto')) {
+                                                    echo 'active';
+                                                } ?>" href="<?php echo home_url(); ?>/contacto">Contacto</a></li>
                             </ul>
                         </nav>
 

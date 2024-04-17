@@ -137,7 +137,7 @@
                     </div>
                 </div>
                 <div class="widget">
-                    <a href="#" class="btn btn-custom btn-bg-dark btn-text-light btn-icon-left btn-fx width100"><i class="fa fa-file-pdf-o"></i>Brochure</a>
+                    <a href="#" class="btn btn-custom btn-bg-dark btn-text-light btn-icon-left btn-fx width100" style="color: 0% 0% / cover rgb(73, 74, 77);"><i class="fa fa-file-pdf-o"></i>Brochure</a>
                 </div>
             </div>
 

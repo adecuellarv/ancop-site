@@ -4,10 +4,10 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1 class="designer-font">Contacto</h1>
+                <h1>Contacto</h1>
                 <div class="small-border-deco"><span></span></div>
                 <ul class="crumb">
-                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="<?php echo home_url(); ?>">Inicio</a></li>
                     <li class="sep"></li>
                     <li>Contacto</li>
                 </ul>
@@ -23,7 +23,12 @@
 
     <div class="container">
         <div class="row">
+            <div class="col-md-12" style="text-align: center; margin-bottom: 50px;">
+                <h2 style="color: #045c8a;">ESTAMOS PARA ASESORARTE DE PRINCIPIO A FIN</h2>
+                <h3>PERMITENOS SER LA PIEZA CLAVE EN EL DESARROLLO DE TUS PROYECTOS</h3>
+            </div>
             <div class="col-md-8">
+
                 <div class="de_tab tab_style_2">
 
                     <div class="de_tab_content tc_style-1">
@@ -31,17 +36,22 @@
                         <div id="tab1">
 
                             <div class="row">
+                                <div class="col-md-8">
+
+
+                                    <p></p>
+                                </div>
                                 <div class="col-md-6">
                                     <div class="map-container">
-                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.840289118618!2d144.9537363149519!3d-37.817209742012885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d4c2b349649%3A0xb6899234e561db11!2sEnvato!5e0!3m2!1sen!2sid!4v1462781318185" width="600" height="380" frameborder="0" style="border: 0" allowfullscreen></iframe>
+                                        <img src="<?php bloginfo('template_url'); ?>/images/mapa.PNG" alt="" />
                                     </div>
                                 </div>
 
                                 <div class="col-md-6">
 
                                     <address class="address-style-2">
-                                        <span>Calle: Jose Bustamante, #130-A, Colonia Valle Alameda, Querétaro</span>
-                                        <span><strong>Tel:</strong>(442) 237 3145 / (442) 784 9686</span>
+                                        <span>Santiago de Querétaro, Querétaro.</span>
+                                        <span><strong>Tel:</strong> (442) 110 0788 </br> (442) 237 3145 </br> (442) 784 9686</span>
                                         <span><strong>Email:</strong><a href="mailto:contacto@ancop.com.mx">contacto@ancop.com.mx</a></span>
                                     </address>
                                 </div>

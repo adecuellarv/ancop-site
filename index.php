@@ -1,42 +1,168 @@
 <?php get_header(); ?>
+<style>
+    html,
+    body {
+        position: relative;
+        height: 100%;
+    }
+
+    body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+    }
+
+    swiper-container {
+        width: 100%;
+        height: 100%;
+    }
+
+    swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+</style>
 <div id="content" class="no-bottom no-top">
 
     <!-- section begin -->
-    <section id="section-hero-2" class="full-height text-light relative" data-stellar-background-ratio=".2">
-
-        <div class="center-y fadeScroll text-center relative" data-scroll-speed="1">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
-                        <div class="spacer-double"></div>
-                        <h1 class="big wow fadeInUp designer-font" data-wow-delay=".5s">ANCOP</h1>
-                        <br>
-                        <div class="h2_title wow fadeInUp" data-wow-delay=".8s">
-                            <div class="text-slider" style="color: #8fb1d4;">
-                                <span class="text-item">Proyectos planeados son mejores proyectos</span>
-                                <span class="text-item">Mantenimiento integral a tu servicio</span>
+    <section id="section-slider" class="fullwidthbanner-container" aria-label="section-slider">
+        <div id="revolution-slider">
+            <ul>
+                <li data-transition="fade" data-slotamount="10" data-masterspeed="default" data-thumb="">
+                    <div style="position:absolute; background: rgb(0 0 0 / 51%); width: 100%; height: 100vh; left:0px; top: 0px; z-index: 1;"> </div>
+                    <img src="<?php bloginfo('template_url'); ?>/images/slider/SLIDER-3.jpg" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" />
+                    <div class="center-y fadeScroll text-center relative" data-scroll-speed="1" style="position: relative; z-index: 11;">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-8 col-md-offset-2">
+                                    <div class="spacer-double"></div>
+                                    <h1 class="big wow fadeInUp designer-font" style="color:#fff;" data-wow-delay=".5s">ANCOP</h1>
+                                    <br>
+                                    <div class="h2_title wow fadeInUp" data-wow-delay=".8s">
+                                        <div class="text-slider" style="color: #eee;">
+                                            <span class="text-item">Proyectos planeados son mejores proyectos</span>
+                                            <span class="text-item">Mantenimiento integral a tu servicio</span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p style="font-size: 18px;color:#fff;">Todas nuestras decisiones están orientadas a
+                                            mejorar la satisfacción de nuestros clientes. Nos
+                                            guiamos por la constante búsqueda de ofrecer
+                                            respuestas a las diversas necesidades de
+                                            nuestros colaboradores.</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div>
-                            <p style="font-size: 18px;">Todas nuestras decisiones están orientadas a
-                                mejorar la satisfacción de nuestros clientes. Nos
-                                guiamos por la constante búsqueda de ofrecer
-                                respuestas a las diversas necesidades de
-                                nuestros colaboradores.</p>
-                        </div>
-
-
                     </div>
-                </div>
-            </div>
+                </li>
+
+                <li data-transition="fade" data-slotamount="10" data-masterspeed="default" data-thumb="">
+                    <!--  BACKGROUND IMAGE -->
+                    <div style="position:absolute; background: rgb(0 0 0 / 51%); width: 100%; height: 100vh; left:0px; top: 0px; z-index: 1;"> </div>
+                    <img src="<?php bloginfo('template_url'); ?>/images/slider/SLIDER-3.jpg" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" />
+                    <div class="center-y fadeScroll text-center relative" data-scroll-speed="1" style="position: relative; z-index: 11;">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-8 col-md-offset-2">
+                                    <div class="spacer-double"></div>
+                                    <h1 class="big wow fadeInUp designer-font" style="color:#fff;" data-wow-delay=".5s">ANCOP</h1>
+                                    <br>
+                                    <div class="h2_title wow fadeInUp" data-wow-delay=".8s">
+                                        <div class="text-slider" style="color: #eee;">
+                                            <span class="text-item">Proyectos planeados son mejores proyectos</span>
+                                            <span class="text-item">Mantenimiento integral a tu servicio</span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p style="font-size: 18px;color:#fff;">Todas nuestras decisiones están orientadas a
+                                            mejorar la satisfacción de nuestros clientes. Nos
+                                            guiamos por la constante búsqueda de ofrecer
+                                            respuestas a las diversas necesidades de
+                                            nuestros colaboradores.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li data-transition="fade" data-slotamount="10" data-masterspeed="default" data-thumb="">
+                    <!--  BACKGROUND IMAGE -->
+                    <div style="position:absolute; background: rgb(0 0 0 / 51%); width: 100%; height: 100vh; left:0px; top: 0px; z-index: 1;"> </div>
+                    <img src="<?php bloginfo('template_url'); ?>/images/slider/SLIDER-4.jpg" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" />
+                    <div class="center-y fadeScroll text-center relative" data-scroll-speed="1" style="position: relative; z-index: 11;">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-8 col-md-offset-2">
+                                    <div class="spacer-double"></div>
+                                    <h1 class="big wow fadeInUp designer-font" style="color:#fff;" data-wow-delay=".5s">ANCOP</h1>
+                                    <br>
+                                    <div class="h2_title wow fadeInUp" data-wow-delay=".8s">
+                                        <div class="text-slider" style="color: #eee;">
+                                            <span class="text-item">Proyectos planeados son mejores proyectos</span>
+                                            <span class="text-item">Mantenimiento integral a tu servicio</span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p style="font-size: 18px;color:#fff;">Todas nuestras decisiones están orientadas a
+                                            mejorar la satisfacción de nuestros clientes. Nos
+                                            guiamos por la constante búsqueda de ofrecer
+                                            respuestas a las diversas necesidades de
+                                            nuestros colaboradores.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li data-transition="fade" data-slotamount="10" data-masterspeed="default" data-thumb="">
+                    <!--  BACKGROUND IMAGE -->
+                    <div style="position:absolute; background: rgb(0 0 0 / 51%); width: 100%; height: 100vh; left:0px; top: 0px; z-index: 1;"> </div>
+                    <img src="<?php bloginfo('template_url'); ?>/images/slider/SLIDER-5.jpg" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" />
+                    <div class="center-y fadeScroll text-center relative" data-scroll-speed="1" style="position: relative; z-index: 11;">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-8 col-md-offset-2">
+                                    <div class="spacer-double"></div>
+                                    <h1 class="big wow fadeInUp designer-font" style="color:#fff;" data-wow-delay=".5s">ANCOP</h1>
+                                    <br>
+                                    <div class="h2_title wow fadeInUp" data-wow-delay=".8s">
+                                        <div class="text-slider" style="color: #eee;">
+                                            <span class="text-item">Proyectos planeados son mejores proyectos</span>
+                                            <span class="text-item">Mantenimiento integral a tu servicio</span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p style="font-size: 18px;color:#fff;">Todas nuestras decisiones están orientadas a
+                                            mejorar la satisfacción de nuestros clientes. Nos
+                                            guiamos por la constante búsqueda de ofrecer
+                                            respuestas a las diversas necesidades de
+                                            nuestros colaboradores.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+            </ul>
         </div>
-
-        <a href="#section-about" class="scroll-to">
-            <span class="mouse fadeScroll relative" data-scroll-speed="2">
-                <span class="scroll"></span>
-            </span>
-        </a>
-
     </section>
     <!-- section close -->
 
@@ -63,8 +189,8 @@
                             <img src="<?php echo $image_cat; ?>" class="img-responsive" style="height: 320px; width:100%; object-fit: cover;" alt="">
                         </figure>
                         <h3><?php echo $item->name; ?></h3>
-                        <p >
-                            <?php echo wp_trim_words( $item->description, 30 );?>
+                        <p>
+                            <?php echo wp_trim_words($item->description, 30); ?>
                             <br>
                             <a href="<?php echo home_url(); ?>/nuestros-servicios?categoria=<?php echo $item->slug; ?>" class="read_more mt10">Ver más <i class="fa fa-chevron-right id-color"></i></a>
                         </p>
@@ -104,7 +230,7 @@
             <!-- gallery item -->
             <div class="item residential">
                 <div class="picframe">
-                    <a href="project-details-1.html">
+                    <a data-toggle="modal" data-target="#modalProjects">
                         <span class="overlay">
                             <span class="pf_text">
                                 <span class="project-name">Green House</span>
@@ -119,7 +245,7 @@
             <!-- gallery item -->
             <div class="item commercial education">
                 <div class="picframe">
-                    <a href="project-details-2.html">
+                    <a data-toggle="modal" data-target="#modalProjects">
                         <span class="overlay">
                             <span class="pf_text">
                                 <span class="project-name">Contemporary Building</span>
@@ -135,7 +261,7 @@
             <!-- gallery item -->
             <div class="item commercial hospitaly">
                 <div class="picframe">
-                    <a href="project-details-3.html">
+                    <a data-toggle="modal" data-target="#modalProjects">
                         <span class="overlay">
                             <span class="pf_text">
                                 <span class="project-name">Twin Tower</span>
@@ -151,7 +277,7 @@
             <!-- gallery item -->
             <div class="item commercial hospitaly">
                 <div class="picframe">
-                    <a href="project-details-4.html">
+                    <a data-toggle="modal" data-target="#modalProjects">
                         <span class="overlay">
                             <span class="pf_text">
                                 <span class="project-name">Modern Skyline</span>
@@ -166,7 +292,7 @@
             <!-- gallery item -->
             <div class="item office commercial">
                 <div class="picframe">
-                    <a href="project-details-5.html">
+                    <a data-toggle="modal" data-target="#modalProjects">
                         <span class="overlay">
                             <span class="pf_text">
                                 <span class="project-name">Modern Office</span>
@@ -181,7 +307,7 @@
             <!-- gallery item -->
             <div class="item residential">
                 <div class="picframe">
-                    <a href="project-details-1.html">
+                    <a data-toggle="modal" data-target="#modalProjects">
                         <span class="overlay">
                             <span class="pf_text">
                                 <span class="project-name">Country Side House</span>
@@ -196,7 +322,7 @@
             <!-- gallery item -->
             <div class="item office education">
                 <div class="picframe">
-                    <a href="project-details-2.html">
+                    <a data-toggle="modal" data-target="#modalProjects">
                         <span class="overlay">
                             <span class="pf_text">
                                 <span class="project-name">Cube Office</span>
@@ -212,7 +338,7 @@
             <!-- gallery item -->
             <div class="item residential">
                 <div class="picframe">
-                    <a href="project-details-3.html">
+                    <a data-toggle="modal" data-target="#modalProjects">
                         <span class="overlay">
                             <span class="pf_text">
                                 <span class="project-name">London Luxury House</span>
@@ -235,42 +361,62 @@
         <div class="container">
             <h2>Clientes<span class="tiny-border"></span></h2>
             <div class="row">
-                <div class="col-md-3 wow fadeIn" data-wow-delay="0">
-                    <div class="de_count">
-                        <i class="icon_clock_alt id-color" data-animation="fadeInDown" data-delay="0"></i>
-                        <h3>Santander</h3>
-                        <span>Querétaro</span>
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div style="background: #f4f4f4;">
+                                <img src="<?php bloginfo('template_url'); ?>/images/LOGOS/1.PNG" style="width: 100%;" />
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div style="background: 0% 0% / cover rgb(61 61 61);">
+                                <img src="<?php bloginfo('template_url'); ?>/images/LOGOS/2.PNG" style="width: 100%;" />
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div style="background: 0% 0% / cover rgb(244 244 244);">
+                                <img src="<?php bloginfo('template_url'); ?>/images/LOGOS/3.PNG" style="width: 100%;" />
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div style="background: 0% 0% / cover rgb(244 244 244);">
+                                <img src="<?php bloginfo('template_url'); ?>/images/LOGOS/4.PNG" style="width: 100%;" />
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div style="background: 0% 0% / cover rgb(31 31 31);">
+                                <img src="<?php bloginfo('template_url'); ?>/images/LOGOS/5.PNG" style="width: 100%;" />
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div style="background: 0% 0% / cover rgb(244 244 244);">
+                                <img src="<?php bloginfo('template_url'); ?>/images/LOGOS/6.PNG" style="width: 100%;" />
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div style="background: 0% 0% / cover rgb(244 244 244);">
+                                <img src="<?php bloginfo('template_url'); ?>/images/LOGOS/7.PNG" style="width: 100%;" />
+                            </div>
+                        </div>
                     </div>
+                   
                 </div>
 
-                <div class="col-md-3 wow fadeIn" data-wow-delay=".25s">
-                    <div class="de_count">
-                        <i class="icon_documents_alt  id-color" data-animation="fadeInDown" data-delay="200"></i>
-                        <h3>Comercial</h3>
-                        <span>San Luis</span>
-                    </div>
-                </div>
-
-                <div class="col-md-3 wow fadeIn" data-wow-delay=".5s">
-                    <div class="de_count">
-                        <i class="icon_comment_alt  id-color" data-animation="fadeInDown" data-delay="400"></i>
-                        <h3>Depot</h3>
-                        <span>Querétaro</span>
-                    </div>
-                </div>
-
-                <div class="col-md-3 wow fadeIn" data-wow-delay=".75s">
-                    <div class="de_count">
-                        <i class="icon_globe id-color" data-animation="fadeInDown" data-delay="600"></i>
-                        <h3>Amaris</h3>
-                        <span>Querétaro</span>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
-    <!-- section close -->
+    <div class="modal fade" id="modalProjects" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" style="z-index: 999">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Proyecto <i>KFC</i></h1>
 
-
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <?php get_footer(); ?>

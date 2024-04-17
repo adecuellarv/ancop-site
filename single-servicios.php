@@ -6,21 +6,18 @@ $thumbID = get_post_thumbnail_id($post->ID);
 $imgDestacada = wp_get_attachment_url($thumbID);
 $titulo = get_the_title();
 $slug = basename(get_permalink($post->ID));
-
-
+$slider = get_field('galeria', $post->ID);
+//$parent = get_the_category($post->ID);
+//$tax_terms = get_terms('categoria', array('hide_empty' => false, 'parent_of' => $post->ID));
+//print_r($tax_terms);
 ?>
 <!-- subheader -->
 <section id="subheader" data-stellar-background-ratio=".3">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1 class="designer-font"><?php echo $titulo; ?></h1>
+                <h1 class=""><?php echo $titulo; ?></h1>
                 <div class="small-border-deco"><span></span></div>
-                <ul class="crumb">
-                    <li><a href="index.html">BIMP</a></li>
-                    <li class="sep"></li>
-                    <li><?php echo $titulo; ?></li>
-                </ul>
             </div>
         </div>
     </div>
@@ -34,87 +31,18 @@ $slug = basename(get_permalink($post->ID));
             <div class="col-md-9">
 
                 <div class="row">
-
-                    <div class="col-md-6 pic-services">
-                        <img src="<?php bloginfo('template_url'); ?>/images/services/ELEC-2.png" class="img-responsive" alt="">
-                        <img src="<?php bloginfo('template_url'); ?>/images/services/ELEC-2.png" class="img-responsive" alt="">
+                    <div class="col-md-12" style="margin-bottom:50px;">
+                        <?php echo the_content(); ?>
                     </div>
-
-                    <div class="col-md-6">
-                        <?php echo the_content(); ?> </div>
+                    <?php foreach ($slider as $item) { ?>
+                        <div class="col-md-6 pic-services">
+                            <img src="<?php echo $item; ?>" class="img-responsive" alt="">
+                        </div>
+                    <?php } ?>
                 </div>
 
                 <div class="spacer-single"></div>
 
-                <h3>Proyectos relacionados<span class="tiny-border"></span></h3>
-
-                <div class="spacer-half"></div>
-
-                <div id="gallery" class="gallery full-gallery de-gallery pf_full_width">
-
-                    <!-- gallery item -->
-                    <div class="item office commercial">
-                        <div class="picframe">
-                            <a href="project-details-5.html">
-                                <span class="overlay">
-                                    <span class="pf_text">
-                                        <span class="project-name">Modern Office</span>
-                                    </span>
-                                </span>
-                            </a>
-                            <img src="<?php bloginfo('template_url'); ?>/images/portfolio/pf%20(5).jpg" alt="" />
-                        </div>
-                    </div>
-                    <!-- close gallery item -->
-
-                    <!-- gallery item -->
-                    <div class="item residential">
-                        <div class="picframe">
-                            <a href="project-details-6.html">
-                                <span class="overlay">
-                                    <span class="pf_text">
-                                        <span class="project-name">Country Side House</span>
-                                    </span>
-                                </span>
-                            </a>
-                            <img src="<?php bloginfo('template_url'); ?>/images/portfolio/pf%20(6).jpg" alt="" />
-                        </div>
-                    </div>
-                    <!-- close gallery item -->
-
-                    <!-- gallery item -->
-                    <div class="item office education">
-                        <div class="picframe">
-                            <a href="project-details-7.html">
-                                <span class="overlay">
-                                    <span class="pf_text">
-                                        <span class="project-name">Cube Office</span>
-                                    </span>
-                                </span>
-                            </a>
-
-                            <img src="<?php bloginfo('template_url'); ?>/images/portfolio/pf%20(7).jpg" alt="" />
-                        </div>
-                    </div>
-                    <!-- close gallery item -->
-
-                    <!-- gallery item -->
-                    <div class="item residential">
-                        <div class="picframe">
-                            <a href="project-details-8.html">
-                                <span class="overlay">
-                                    <span class="pf_text">
-                                        <span class="project-name">London Luxury House</span>
-                                    </span>
-                                </span>
-                            </a>
-
-                            <img src="<?php bloginfo('template_url'); ?>/images/portfolio/pf%20(8).jpg" alt="" />
-                        </div>
-                    </div>
-                    <!-- close gallery item -->
-
-                </div>
 
             </div>
 
@@ -124,53 +52,38 @@ $slug = basename(get_permalink($post->ID));
                         <?php
                         $serv_slid = new WP_Query('post_type=servicios');
                         if (have_posts()) : while ($serv_slid->have_posts()) : $serv_slid->the_post();
-                                //$img_slider = get_field('img_slider',get_the_ID());
+
                                 global $post;
-                                $titulo = get_the_title();
-                                $slug = basename(get_permalink($post->ID));
+                                $titulo_ = get_the_title();
+                                $slug_ = basename(get_permalink($post->ID));
+                                //echo $slug . '------' . $slug_;
                         ?>
-                                <li class="active"><a href="<?php echo home_url(); ?>/servicios/<?php echo $slug; ?>"><?php echo $titulo; ?></a></li>
+                                <li class="<?php if ($slug_ == $slug) {
+                                                echo 'active';
+                                            } ?>"><a href="<?php echo home_url(); ?>/servicios/<?php echo $slug_; ?>"><?php echo $titulo_; ?></a></li>
                         <?php
                             endwhile;
                         endif;
                         ?>
                     </ul>
                 </div>
-
                 <div class="widget">
-                    <div class="padding30 text-black" data-bgimage="url(images/background/banner-1.jpg)">
-                        <h4>¡Atención!</h4>
-                        ¿Busca el mejor socio para sus próximas obras de construcción?
-                        <div class="text-center">
-                            <a href="" class="btn btn-line-black btn-fx mt20">Contáctanos</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="widget">
-                    <a href="#" class="btn btn-custom btn-bg-dark btn-text-light btn-icon-left btn-fx width100"><i class="fa fa-file-pdf-o"></i>Brochure</a>
+                    <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2024/03/Brochure_ANCOP.pdf" target="_blank" class="btn btn-custom btn-bg-dark btn-text-light btn-icon-left btn-fx width100" style="color: 0% 0% / cover rgb(73, 74, 77);"><i class="fa fa-file-pdf-o"></i>Brochure</a>
                 </div>
             </div>
-
-
-
-
-
         </div>
     </div>
-
-
-
 </div>
 <!-- section begin -->
-<section class="call-to-action bg-color dark mt80 pt20 pb20" data-speed="5" data-type="background">
+<section class=" pt20 pb20" style="background: #494A4D;">
     <div class="container">
         <div class="row">
             <div class="col-md-8">
-                <h3 class="mt10">¿Busca el mejor socio para sus próximas obras de construcción?</h3>
+                <h3 class="mt10" style="color: #fff;">¿Buscas el mejor socio para tus próximas obras de construcción?</h3>
             </div>
 
             <div class="col-md-4 text-right">
-                <a href="" class="btn btn-line-black btn-fx">Contáctanos</a>
+                <a href="<?php echo home_url(); ?>/contacto" class="btn btn-line-white btn-fx" style="color: #fff;">Contáctanos</a>
             </div>
         </div>
     </div>

@@ -58,7 +58,7 @@ $services = new WP_Query($args);
                     <div class="widget text-center">
                         <div class="padding30 text-black" data-bgimage="url(images/background/banner-1.jpg)">
                             <h4>¡Atención!</h4>
-                            ¿Buscas el mejor socio para sus próximas obras de construcción?
+                            ¿Buscas el mejor socio para tus próximas obras de construcción?
                             <div class="">
                                 <a href="<?php echo home_url(); ?>/contacto" class="btn btn-line-black btn-fx mt20">Contáctanos</a>
                             </div>
@@ -87,7 +87,7 @@ $services = new WP_Query($args);
 
 
                 <div class="widget">
-                    <a href="#" class="btn btn-custom btn-bg-dark btn-text-light btn-icon-left btn-fx width100"><i class="fa fa-file-pdf-o"></i>Brochure</a>
+                    <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2024/03/Brochure_ANCOP.pdf" target="_blank" class="btn btn-custom btn-bg-dark btn-text-light btn-icon-left btn-fx width100"><i class="fa fa-file-pdf-o"></i>Brochure</a>
                 </div>
             </div>
         </div>
