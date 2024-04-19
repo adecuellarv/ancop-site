@@ -32,7 +32,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-4">
-                        <div class="padding30 mb30" data-bgcolor="#eee" style="min-height:320px">
+                        <div class="padding30 mb30" data-bgcolor="#eee" style="min-height:398px">
                             <div class="">
 
                                 <div class="text">
@@ -44,7 +44,7 @@
                     </div>
 
                     <div class="col-md-4">
-                        <div class="padding30 mb30" data-bgcolor="#eee" style="min-height:320px">
+                        <div class="padding30 mb30" data-bgcolor="#eee" style="min-height:398px">
                             <div class="">
 
                                 <div class="text">
@@ -56,42 +56,36 @@
                     </div>
 
                     <div class="col-md-4">
-                        <div class="padding30 mb30" data-bgcolor="#eee" style="min-height:320px">
+                        <div class="padding30 mb30" data-bgcolor="#eee" style="min-height:398px">
                             <div class="">
 
                                 <div class="text">
                                     <h3>Filosofia</h3>
-                                    Brindar un servicio excepcional a nuestros clientes en cada paso del camino. Reconocemos que cada cliente es único, con necesidades y desafíos específicos, y es por eso que nos esforzamos por ofrecer soluciones técnicas personalizadas que se adapten a sus requerimientos individuales. Nuestro equipo de especialistas altamente capacitados y experimentados está disponible para proporcionar asesoramiento experto y orientación en cada etapa del proceso, desde la planificación inicial hasta la ejecución y el seguimiento posterior.
+                                    La filosofía operativa de Ancop se centra en el reconocimiento de nuestro activo más valioso: nuestro personal operativo. Estamos firmemente convencidos de que la excelencia en nuestro trabajo se fundamenta en la calidad y dedicación de quienes forman parte de nuestro equipo. Es por ello que nos comprometemos a mantener un equipo altamente cualificado y en constante capacitación.
+
+                                    Creemos que la capacitación continua es fundamental para mantenernos actualizados y preparados para enfrentar cualquier desafío que se presente. De esta manera, podemos abordar cada tarea con profesionalismo, eficiencia y productividad, garantizando así la satisfacción de nuestros clientes y el éxito de nuestros proyectos.
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-md-12" style="text-align: center;">
-                        <div >
-                            <h2><strong>- VALORES -</strong></h2>
-                        </div>
-                        
-                        <div class="row">
-                            <div class="col-md-4">
-                                <h2 style="color:#494A4D">Excelencia</h2>
-                            </div>
-                            <div class="col-md-4">
-                                <h2 style="color:#494A4D">Compromiso</h2>
-                            </div>
-                            <div class="col-md-4">
-                                <h2 style="color:#494A4D">Innovación</h2>
-                            </div>
+                    <div class="col-md-12" style="text-align: center; padding-top: 50px">
+                        <div>
+                            <h2><strong>NUESTROS VALORES </strong></h2>
                         </div>
                         <div class="row">
-                            <div class="col-md-4">
-                                <h2 style="color:#494A4D">Integridad</h2>
-                            </div>
-                            <div class="col-md-4">
-                                <h2 style="color:#494A4D">Colaboración</h2>
-                            </div>
-                            <div class="col-md-4">
-                                <h2 style="color:#494A4D">Orientación al cliente</h2>
+                            <div class="col-md-8 col-md-offset-2 text-center div-content-custom">
+                                <div class="spacer-double"></div>
+                                <div class="h2_title wow fadeInUp" data-wow-delay=".8s">
+                                    <div class="text-slider" style="color: #000;">
+                                        <h1 class="text-item designer-font">Excelencia</h1>
+                                        <h1 class="text-item designer-font">Compromiso</h1>
+                                        <h1 class="text-item designer-font">Innovación</h1>
+                                        <h1 class="text-item designer-font">Integridad</h1>
+                                        <h1 class="text-item designer-font">Colaboración</h1>
+                                        <h1 class="text-item designer-font">Orientación al cliente</h1>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         </p>

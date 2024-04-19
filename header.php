@@ -47,7 +47,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-8">
-                            <div class="col"><span class="id-color"><i class="fa fa-map-marker"></i></span>Calle: Jose Bustamante, #130-A, Colonia Valle Alameda, Querétaro </div>
+                            <div class="col"><span class="id-color"><i class="fa fa-map-marker"></i></span>Santiago de Querétaro, Querétaro.</div>
                             <div class="col"><span class="id-color"><i class="fa fa-phone"></i></span>(442) 237 3145 / (442) 784 9686</div>
 
 
