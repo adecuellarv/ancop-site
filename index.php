@@ -192,7 +192,7 @@
 
             <!-- gallery item -->
             <div class="item residential">
-                <div class="picframe">
+                <div class="picframe" style="max-height: 270px; cursor: pointer;">
                     <a data-toggle="modal" data-target="#modalProjects" onclick="setProject('kfc')">
                         <span class="overlay">
                             <span class="pf_text">
@@ -200,14 +200,14 @@
                             </span>
                         </span>
                     </a>
-                    <img src="<?php bloginfo('template_url'); ?>/images/portfolio/pf%20(1).jpg" alt="" />
+                    <img src="<?php bloginfo('template_url'); ?>/images/projects/PROYECTO-KFC.jpg" alt="" />
                 </div>
             </div>
             <!-- close gallery item -->
 
             <!-- gallery item -->
             <div class="item commercial education">
-                <div class="picframe">
+                <div class="picframe" style="max-height: 270px; cursor: pointer;">
                     <a data-toggle="modal" data-target="#modalProjects" onclick="setProject('pizzahut')">
                         <span class="overlay">
                             <span class="pf_text">
@@ -216,14 +216,14 @@
                         </span>
                     </a>
 
-                    <img src="<?php bloginfo('template_url'); ?>/images/portfolio/pf%20(2).jpg" alt="" />
+                    <img src="<?php bloginfo('template_url'); ?>/images/projects/PROYECTO-PIZZA.jpg" alt="" />
                 </div>
             </div>
             <!-- close gallery item -->
 
             <!-- gallery item -->
             <div class="item commercial hospitaly">
-                <div class="picframe">
+                <div class="picframe" style="max-height: 270px; cursor: pointer;">
                     <a data-toggle="modal" data-target="#modalProjects" onclick="setProject('torres')">
                         <span class="overlay">
                             <span class="pf_text">
@@ -232,14 +232,14 @@
                         </span>
                     </a>
 
-                    <img src="<?php bloginfo('template_url'); ?>/images/portfolio/pf%20(3).jpg" alt="" />
+                    <img src="<?php bloginfo('template_url'); ?>/images/projects/PROYECTO-TORRES.jpg" alt="" />
                 </div>
             </div>
             <!-- close gallery item -->
 
             <!-- gallery item -->
             <div class="item commercial hospitaly">
-                <div class="picframe">
+                <div class="picframe" style="max-height: 270px; cursor: pointer;">
                     <a data-toggle="modal" data-target="#modalProjects" onclick="setProject('equinix')">
                         <span class="overlay">
                             <span class="pf_text">
@@ -247,14 +247,14 @@
                             </span>
                         </span>
                     </a>
-                    <img src="<?php bloginfo('template_url'); ?>/images/portfolio/pf%20(4).jpg" alt="" />
+                    <img src="<?php bloginfo('template_url'); ?>/images/projects/PROYECTO-EQUINIX.jpeg" alt="" />
                 </div>
             </div>
             <!-- close gallery item -->
 
             <!-- gallery item -->
             <div class="item office commercial">
-                <div class="picframe">
+                <div class="picframe" style="max-height: 270px; cursor: pointer;">
                     <a data-toggle="modal" data-target="#modalProjects" onclick="setProject('bmw')">
                         <span class="overlay">
                             <span class="pf_text">
@@ -262,13 +262,13 @@
                             </span>
                         </span>
                     </a>
-                    <img src="<?php bloginfo('template_url'); ?>/images/portfolio/pf%20(5).jpg" alt="" />
+                    <img src="<?php bloginfo('template_url'); ?>/images/projects/PROYECTO-BMW.jpg" alt="" />
                 </div>
             </div>
             <!-- close gallery item -->
 
             <!-- gallery item -->
-            <div class="item residential">
+            <div class="item residential" style="max-height: 270px; cursor: pointer;">
                 <div class="picframe">
                     <a data-toggle="modal" data-target="#modalProjects" onclick="setProject('wallmart')">
                         <span class="overlay">
@@ -277,13 +277,13 @@
                             </span>
                         </span>
                     </a>
-                    <img src="<?php bloginfo('template_url'); ?>/images/portfolio/pf%20(6).jpg" alt="" />
+                    <img src="<?php bloginfo('template_url'); ?>/images/projects/PROYECTO-WALMART.jpg" alt="" />
                 </div>
             </div>
             <!-- close gallery item -->
 
             <!-- gallery item -->
-            <div class="item office education">
+            <div class="item office education" style="max-height: 270px; cursor: pointer;">
                 <div class="picframe">
                     <a data-toggle="modal" data-target="#modalProjects" onclick="setProject('gmc')">
                         <span class="overlay">
@@ -293,10 +293,11 @@
                         </span>
                     </a>
 
-                    <img src="<?php bloginfo('template_url'); ?>/images/portfolio/pf%20(7).jpg" alt="" />
+                    <img src="<?php bloginfo('template_url'); ?>/images/projects/PROYECTO-GMC.jpg" alt="" />
                 </div>
             </div>
             <!-- close gallery item -->
+            
 
         </div>
 
@@ -451,6 +452,5 @@
 
             $('#decription_modal').html(desc)
         }
-        console.log('#', filt)
     }
 </script>
