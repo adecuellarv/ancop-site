@@ -104,7 +104,7 @@
  </script>
  <script>
      $(window).load(function() {
-         var swiper = new Swiper('.swiper-container', {
+         var swiper = new Swiper('.swiper-cards', {
              slidesPerView: 4,
              spaceBetween: 30,
              centeredSlides: false,
@@ -125,7 +125,7 @@
      })
      $(window).load(function() {
          var swiper2 = new Swiper(".mySwiper", {
-             spaceBetween: 30,
+             //spaceBetween: 20,
              effect: "fade",
              autoplay: {
                  delay: 3500,

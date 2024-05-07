@@ -9,119 +9,105 @@
         padding-top: 150px;
         ;
     }
+
+    .carousel {
+        position: relative;
+        height: 100vh;
+    }
+
+    .slides {
+        position: relative;
+        height: 100vh;
+        width: 100%;
+    }
+
+    .slide {
+        opacity: 0;
+
+        position: relative;
+        height: 100vh;
+        transition: opacity 1s ease-in; 
+    }
+
+    .slide.active {
+        opacity: 1;
+ 
+       
+    }
+
+    button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: transparent;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .prev {
+        left: 10px;
+    }
+
+    .next {
+        right: 10px;
+    }
+
+    @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+    /*
+    @keyframes slide {
+        20% {
+            background-image: url('<?php bloginfo('template_url'); ?>/images/slider/SLIDER-3.jpg');
+
+        }
+
+        40% {
+            opacity: 1;
+            background-image: url('<?php bloginfo('template_url'); ?>/images/slider/SLIDER-4.jpg');
+
+        }
+
+        80% {
+            opacity: 1;
+            background-image: url('<?php bloginfo('template_url'); ?>/images/slider/SLIDER-5.jpg');
+
+        }
+    }*/
 </style>
 <div id="content" class="no-bottom no-top">
 
     <!-- section begin -->
     <section style="padding: 0px;">
-        <div class="swiper-container mySwiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="div-slider" style="background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.90)), url(<?php bloginfo('template_url'); ?>/images/slider/SLIDER-2.jpg);">
-                        <div data-scroll-speed="1">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-md-8 col-md-offset-2 text-center div-content-custom">
-                                        <div class="spacer-double"></div>
-                                        <h1 class="big wow fadeInUp designer-font" style="color:#fff;" data-wow-delay=".5s">ANCOP</h1>
-                                        <br>
-                                        <div class="h2_title wow fadeInUp" data-wow-delay=".8s">
-                                            <div class="text-slider" style="color: #eee;">
-                                                <span class="text-item">Proyectos planeados son mejores proyectos</span>
-                                                <span class="text-item">Mantenimiento integral a tu servicio</span>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <p style="font-size: 18px;color:#fff;">Todas nuestras decisiones están orientadas a
-                                                mejorar la satisfacción de nuestros clientes. Nos
-                                                guiamos por la constante búsqueda de ofrecer
-                                                respuestas a las diversas necesidades de
-                                                nuestros colaboradores.</p>
+        <div class="carousel">
+            <div class="slides">
+                <div class="slide active" style="background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.90)), url(<?php bloginfo('template_url'); ?>/images/slider/SLIDER-2.jpg);">
+                    <div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-8 col-md-offset-2 text-center div-content-custom">
+                                    <div class="spacer-double"></div>
+                                    <h1 class="big wow fadeInUp designer-font" style="color:#fff;" data-wow-delay=".5s">ANCOP</h1>
+                                    <br>
+                                    <div class="h2_title wow fadeInUp" data-wow-delay=".8s">
+                                        <div class="text-slider" style="color: #eee;">
+                                            <span class="text-item">Proyectos planeados son mejores proyectos</span>
+                                            <span class="text-item">Mantenimiento integral a tu servicio</span>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="div-slider" style="background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.90)), url(<?php bloginfo('template_url'); ?>/images/slider/SLIDER-3.jpg);">
-                        <div data-scroll-speed="1">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-md-8 col-md-offset-2 text-center div-content-custom">
-                                        <div class="spacer-double"></div>
-                                        <h1 class="big wow fadeInUp designer-font" style="color:#fff;" data-wow-delay=".5s">ANCOP</h1>
-                                        <br>
-                                        <div class="h2_title wow fadeInUp" data-wow-delay=".8s">
-                                            <div class="text-slider" style="color: #eee;">
-                                                <span class="text-item">Proyectos planeados son mejores proyectos</span>
-                                                <span class="text-item">Mantenimiento integral a tu servicio</span>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <p style="font-size: 18px;color:#fff;">Todas nuestras decisiones están orientadas a
-                                                mejorar la satisfacción de nuestros clientes. Nos
-                                                guiamos por la constante búsqueda de ofrecer
-                                                respuestas a las diversas necesidades de
-                                                nuestros colaboradores.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="div-slider" style="background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.90)), url(<?php bloginfo('template_url'); ?>/images/slider/SLIDER-6.jpg);">
-                        <div data-scroll-speed="1">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-md-8 col-md-offset-2 text-center div-content-custom">
-                                        <div class="spacer-double"></div>
-                                        <h1 class="big wow fadeInUp designer-font" style="color:#fff;" data-wow-delay=".5s">ANCOP</h1>
-                                        <br>
-                                        <div class="h2_title wow fadeInUp" data-wow-delay=".8s">
-                                            <div class="text-slider" style="color: #eee;">
-                                                <span class="text-item">Proyectos planeados son mejores proyectos</span>
-                                                <span class="text-item">Mantenimiento integral a tu servicio</span>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <p style="font-size: 18px;color:#fff;">Todas nuestras decisiones están orientadas a
-                                                mejorar la satisfacción de nuestros clientes. Nos
-                                                guiamos por la constante búsqueda de ofrecer
-                                                respuestas a las diversas necesidades de
-                                                nuestros colaboradores.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="div-slider" style="background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.90)), url(<?php bloginfo('template_url'); ?>/images/slider/SLIDER-5.jpg);">
-                        <div data-scroll-speed="1">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-md-8 col-md-offset-2 text-center div-content-custom">
-                                        <div class="spacer-double"></div>
-                                        <h1 class="big wow fadeInUp designer-font" style="color:#fff;" data-wow-delay=".5s">ANCOP</h1>
-                                        <br>
-                                        <div class="h2_title wow fadeInUp" data-wow-delay=".8s">
-                                            <div class="text-slider" style="color: #eee;">
-                                                <span class="text-item">Proyectos planeados son mejores proyectos</span>
-                                                <span class="text-item">Mantenimiento integral a tu servicio</span>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <p style="font-size: 18px;color:#fff;">Todas nuestras decisiones están orientadas a
-                                                mejorar la satisfacción de nuestros clientes. Nos
-                                                guiamos por la constante búsqueda de ofrecer
-                                                respuestas a las diversas necesidades de
-                                                nuestros colaboradores.</p>
-                                        </div>
+                                    <div>
+                                        <p style="font-size: 18px;color:#fff;">Todas nuestras decisiones están orientadas a
+                                            mejorar la satisfacción de nuestros clientes. Nos
+                                            guiamos por la constante búsqueda de ofrecer
+                                            respuestas a las diversas necesidades de
+                                            nuestros colaboradores.</p>
                                     </div>
                                 </div>
                             </div>
@@ -129,10 +115,35 @@
                     </div>
                 </div>
 
+                <div class="slide" style="background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.90)), url(<?php bloginfo('template_url'); ?>/images/slider/SLIDER-3.jpg);">
+                    <div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-8 col-md-offset-2 text-center div-content-custom">
+                                    <div class="spacer-double"></div>
+                                    <h1 class="big wow fadeInUp designer-font" style="color:#fff;" data-wow-delay=".5s">ANCOP</h1>
+                                    <br>
+                                    <div class="h2_title wow fadeInUp" data-wow-delay=".8s">
+                                        <div class="text-slider" style="color: #eee;">
+                                            <span class="text-item">Proyectos planeados son mejores proyectos</span>
+                                            <span class="text-item">Mantenimiento integral a tu servicio</span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p style="font-size: 18px;color:#fff;">Todas nuestras decisiones están orientadas a
+                                            mejorar la satisfacción de nuestros clientes. Nos
+                                            guiamos por la constante búsqueda de ofrecer
+                                            respuestas a las diversas necesidades de
+                                            nuestros colaboradores.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-        </div>
+            <button class="prev">←</button>
+            <button class="next">→</button>
     </section>
     <!-- section close -->
 
@@ -297,7 +308,7 @@
                 </div>
             </div>
             <!-- close gallery item -->
-            
+
 
         </div>
 
@@ -309,7 +320,7 @@
         <div class="container">
             <h2>Clientes<span class="tiny-border"></span></h2>
             <div class="row">
-                <div class="swiper-container swiper-cards">
+                <div class="swiper-container">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div style="background: #f4f4f4;">
@@ -453,4 +464,33 @@
             $('#decription_modal').html(desc)
         }
     }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        let currentSlide = 0;
+        const slides = document.querySelectorAll(".slide");
+        const totalSlides = slides.length;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                if (i === index) {
+                    slide.classList.add("active");
+                } else {
+                    slide.classList.remove("active");
+                }
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            showSlide(currentSlide);
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            showSlide(currentSlide);
+        }
+
+        document.querySelector(".next").addEventListener("click", nextSlide);
+        document.querySelector(".prev").addEventListener("click", prevSlide);
+    });
 </script>
