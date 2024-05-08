@@ -7,6 +7,8 @@ $imgDestacada = wp_get_attachment_url($thumbID);
 $titulo = get_the_title();
 $slug = basename(get_permalink($post->ID));
 $slider = get_field('galeria', $post->ID);
+$parent_id = get_the_category($post->ID);
+$terms = get_the_terms($post->ID, 'categoria');
 //$parent = get_the_category($post->ID);
 //$tax_terms = get_terms('categoria', array('hide_empty' => false, 'parent_of' => $post->ID));
 //print_r($tax_terms);
@@ -50,7 +52,18 @@ $slider = get_field('galeria', $post->ID);
                 <div class="widget">
                     <ul id="services-list">
                         <?php
-                        $serv_slid = new WP_Query('post_type=servicios');
+                        $args_list = array(
+                            'post_type' => 'servicios', // Reemplaza 'tu_tipo_de_post' con el nombre de tu tipo de publicación personalizado
+                            'tax_query' => array(
+                                array(
+                                    'taxonomy' => 'categoria', // Reemplaza 'tu_taxonomia' con el nombre de tu taxonomía personalizada
+                                    'field'    => 'slug', // Puedes usar 'id', 'slug' o 'name'
+                                    'terms'    => $terms[0]->slug, // Reemplaza 'termino_de_taxonomia' con el slug o ID del término de la taxonomía que deseas consultar
+                                ),
+                            ),
+                        );
+                        
+                        $serv_slid = new WP_Query($args_list);
                         if (have_posts()) : while ($serv_slid->have_posts()) : $serv_slid->the_post();
 
                                 global $post;
