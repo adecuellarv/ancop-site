@@ -78,6 +78,8 @@
  <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/revolution/js/extensions/revolution.extension.migration.min.js"></script>
  <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
  <script>
      jQuery(document).ready(function() {
          jQuery("#revolution-slider").revolution({
@@ -138,6 +140,98 @@
              loop: true,
          });
      })
+
+     function sendmail() {
+         const urlRn = "https://ancop.com.mx/sendmail.php";
+         const name = document.getElementById('name').value;
+         const email = document.getElementById('email').value;
+         const number = document.getElementById('phone').value;
+         const msg = document.getElementById('message').value;
+
+         const Toast = Swal.mixin({
+             toast: true,
+             position: 'bottom-end',
+             showConfirmButton: false,
+             timer: 5000,
+             timerProgressBar: true,
+             didOpen: (toast) => {
+                 toast.addEventListener('mouseenter', Swal.stopTimer)
+                 toast.addEventListener('mouseleave', Swal.resumeTimer)
+             }
+         })
+
+         let mailOk = false;
+         let numberOk = false;
+
+         if (name && email && number && msg) {
+             const mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+             if (email.match(mailformat)) {
+                 mailOk = true;
+             } else {
+                 document.getElementById('email').style.backgroundColor = 'rgb(' + 233 + ',' + 185 + ',' + 193 + ')';
+             }
+
+             const phoneformat = /^\d{10}$/
+             if (number.match(phoneformat)) {
+                 numberOk = true;
+             } else {
+                 document.getElementById('phone').style.backgroundColor = 'rgb(' + 233 + ',' + 185 + ',' + 193 + ')';
+             }
+
+             if (mailOk && numberOk) {
+                 const values = {
+                     name,
+                     email,
+                     number,
+                     msg
+                 }
+                 $.ajax({
+                     type: 'POST',
+                     url: '' + urlRn + '',
+                     data: values,
+                     beforeSend: function() {
+                         Swal.showLoading()
+                     },
+                     success: function(resp) {
+                         setTimeout(() => {
+                             Swal.fire(
+                                 '¡Mensaje enviado!',
+                                 'Gracias por contactarte con nosotros, en breve nos comunicaremos contigo',
+                                 'success'
+                             )
+
+                             setTimeout(function() {
+                                 location.reload();
+                             }, 900);
+                         }, 900);
+                     },
+                     error: function() {
+                         setTimeout(() => {
+                             Swal.fire({
+                                 title: '¡Error!',
+                                 text: 'Tuvimos problemas al enviar tu mensaje, favor de intentarlo nuevamente',
+                                 icon: 'error',
+                                 confirmButtonText: 'Ok'
+                             })
+                         }, 400);
+
+                     }
+                 });
+             } else {
+                 Toast.fire({
+                     icon: 'error',
+                     title: 'Error en formatos'
+                 })
+             }
+
+         } else {
+             Toast.fire({
+                 icon: 'error',
+                 title: 'Debes llenar los campos del formulario'
+             })
+         }
+
+     };
  </script>
  </body>
 

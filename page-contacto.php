@@ -70,7 +70,7 @@
                     <h3>Envianos un mensaje
                         <span class="tiny-border"></span>
                     </h3>
-                    <form name="contactForm" id='contact_form' method="post" action='email.php'>
+                    <div id='contact_form'>
                         <div class="row">
                             <div class="col-md-12">
                                 <div id='name_error' class='error'>Nombre.</div>
@@ -78,12 +78,12 @@
                                     <input type='text' name='name' id='name' class="form-control" placeholder="Nombre">
                                 </div>
 
-                                <div id='email_error' class='error'>Please enter your valid E-mail ID.</div>
+                                <div id='email_error' class='error'>Inserta un email valido.</div>
                                 <div>
                                     <input type='text' name='email' id='email' class="form-control" placeholder="Email">
                                 </div>
 
-                                <div id='phone_error' class='error'>Numero de telefono.</div>
+                                <div id='phone_error' class='error'>Número de teléfono.</div>
                                 <div>
                                     <input type='text' name='phone' id='phone' class="form-control" placeholder="Numero de telefono">
                                 </div>
@@ -96,13 +96,13 @@
 
                             <div class="col-md-12">
                                 <div id='submit'>
-                                    <input type='submit' id='send_message' value='Enviar' class="btn btn-line">
+                                    <button class="btn btn-line" onclick="sendmail()">Enviar</button>
                                 </div>
-                                <div id='mail_success' class='success'>Your message has been sent successfully.</div>
-                                <div id='mail_fail' class='error'>Sorry, error occured this time sending your message.</div>
+                                <div id='mail_success' class='success'>Tu mensaje fue enviado.</div>
+                                <div id='mail_fail' class='error'>Lo sentimos, tuvimos problemas al enviar tu mensaje.</div>
                             </div>
                         </div>
-                    </form>
+                    </div>
 
                 </div>
             </div>

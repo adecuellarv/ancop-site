@@ -9,6 +9,48 @@
         padding-top: 150px;
         ;
     }
+
+    .div-projects {
+        background-position: 50% 50% !important;
+        background-size: cover !important;
+        height: 270px;
+        width: 100%;
+    }
+
+    .div-project-big {
+        height: 300px;
+    }
+
+    .div-projects>div {
+        position: relative;
+        opacity: 0;
+
+        text-align: center;
+        top: 120px;
+        transition: all .4s;
+
+    }
+
+    .div-projects>div>a {
+        color: #fff;
+        font-weight: bold;
+        font-size: 28px;
+        cursor: pointer;
+    }
+
+    .div-projects:hover>div {
+        opacity: 1;
+    }
+
+    @media screen and (max-width: 991px) {
+        .div-project-big {
+            height: 270px;
+        }
+
+        .div-projects>div {
+            opacity: 1;
+        }
+    }
 </style>
 <div id="content" class="no-bottom no-top">
 
@@ -188,117 +230,74 @@
 
         </div>
 
-        <div id="gallery" class="gallery full-gallery de-gallery pf_full_width">
-
-            <!-- gallery item -->
-            <div class="item residential">
-                <div class="picframe" style="max-height: 270px; cursor: pointer;">
-                    <a data-toggle="modal" data-target="#modalProjects" onclick="setProject('kfc')">
-                        <span class="overlay">
-                            <span class="pf_text">
-                                <span class="project-name">KFC</span>
-                            </span>
-                        </span>
-                    </a>
-                    <img src="<?php bloginfo('template_url'); ?>/images/projects/PROYECTO-KFC.jpg" alt="" />
+        <div class="">
+            <div class="row">
+                <div class="col-md-3" style="padding: 0px;">
+                    <div style="background: linear-gradient(45deg,rgba(0, 0, 0, 0.30),rgba(0, 0, 0, 0.30) ), url(<?php bloginfo('template_url'); ?>/images/projects/PROYECTO-KFC.jpg)no-repeat;" class="div-projects">
+                        <div>
+                            <a data-toggle="modal" data-target="#modalProjects" onclick="setProject('kfc')">
+                                KFC
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3" style="padding: 0px;">
+                    <div style="background: linear-gradient(45deg,rgba(0, 0, 0, 0.30),rgba(0, 0, 0, 0.30) ), url(<?php bloginfo('template_url'); ?>/images/projects/PROYECTO-PIZZA.jpg)no-repeat;" class="div-projects">
+                        <div>
+                            <a data-toggle="modal" data-target="#modalProjects" onclick="setProject('pizzahut')">
+                                Pizza hut
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3" style="padding: 0px;">
+                    <div style="background: linear-gradient(45deg,rgba(0, 0, 0, 0.30),rgba(0, 0, 0, 0.30) ), url(<?php bloginfo('template_url'); ?>/images/projects/PROYECTO-TORRES.jpg)" class="div-projects">
+                        <div>
+                            <a data-toggle="modal" data-target="#modalProjects" onclick="setProject('torres')">
+                                Torres mecanizados
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3" style="padding: 0px;">
+                    <div style="background: linear-gradient(45deg,rgba(0, 0, 0, 0.30),rgba(0, 0, 0, 0.30) ), url(<?php bloginfo('template_url'); ?>/images/projects/PROYECTO-EQUINIX.jpeg)" class="div-projects">
+                        <div>
+                            <a data-toggle="modal" data-target="#modalProjects" onclick="setProject('equinix')">
+                                Equinix
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <!-- close gallery item -->
-
-            <!-- gallery item -->
-            <div class="item commercial education">
-                <div class="picframe" style="max-height: 270px; cursor: pointer;">
-                    <a data-toggle="modal" data-target="#modalProjects" onclick="setProject('pizzahut')">
-                        <span class="overlay">
-                            <span class="pf_text">
-                                <span class="project-name">Pizza hut</span>
-                            </span>
-                        </span>
-                    </a>
-
-                    <img src="<?php bloginfo('template_url'); ?>/images/projects/PROYECTO-PIZZA.jpg" alt="" />
+            <div class="row">
+                <div class="col-md-4" style="padding: 0px;">
+                    <div style="background: linear-gradient(45deg,rgba(0, 0, 0, 0.30),rgba(0, 0, 0, 0.30) ), url(<?php bloginfo('template_url'); ?>/images/projects/PROYECTO-BMW.jpg)" class="div-projects div-project-big">
+                        <div>
+                            <a data-toggle="modal" data-target="#modalProjects" onclick="setProject('bmw')">
+                                Bmw
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" style="padding: 0px;">
+                    <div style="background: linear-gradient(45deg,rgba(0, 0, 0, 0.30),rgba(0, 0, 0, 0.30) ), url(<?php bloginfo('template_url'); ?>/images/projects/PROYECTO-WALMART.jpg)" class="div-projects div-project-big">
+                        <div>
+                            <a data-toggle="modal" data-target="#modalProjects" onclick="setProject('wallmart')">
+                                Wallmart
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" style="padding: 0px;">
+                    <div style="background: linear-gradient(45deg,rgba(0, 0, 0, 0.30),rgba(0, 0, 0, 0.30) ), url(<?php bloginfo('template_url'); ?>/images/projects/PROYECTO-GMC.jpg)" class="div-projects div-project-big">
+                        <div>
+                            <a data-toggle="modal" data-target="#modalProjects" onclick="setProject('gmc')">
+                                GMC
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <!-- close gallery item -->
-
-            <!-- gallery item -->
-            <div class="item commercial hospitaly">
-                <div class="picframe" style="max-height: 270px; cursor: pointer;">
-                    <a data-toggle="modal" data-target="#modalProjects" onclick="setProject('torres')">
-                        <span class="overlay">
-                            <span class="pf_text">
-                                <span class="project-name">Torres mecanizados</span>
-                            </span>
-                        </span>
-                    </a>
-
-                    <img src="<?php bloginfo('template_url'); ?>/images/projects/PROYECTO-TORRES.jpg" alt="" />
-                </div>
-            </div>
-            <!-- close gallery item -->
-
-            <!-- gallery item -->
-            <div class="item commercial hospitaly">
-                <div class="picframe" style="max-height: 270px; cursor: pointer;">
-                    <a data-toggle="modal" data-target="#modalProjects" onclick="setProject('equinix')">
-                        <span class="overlay">
-                            <span class="pf_text">
-                                <span class="project-name">Equinix</span>
-                            </span>
-                        </span>
-                    </a>
-                    <img src="<?php bloginfo('template_url'); ?>/images/projects/PROYECTO-EQUINIX.jpeg" alt="" />
-                </div>
-            </div>
-            <!-- close gallery item -->
-
-            <!-- gallery item -->
-            <div class="item office commercial">
-                <div class="picframe" style="max-height: 270px; cursor: pointer;">
-                    <a data-toggle="modal" data-target="#modalProjects" onclick="setProject('bmw')">
-                        <span class="overlay">
-                            <span class="pf_text">
-                                <span class="project-name">Bmw</span>
-                            </span>
-                        </span>
-                    </a>
-                    <img src="<?php bloginfo('template_url'); ?>/images/projects/PROYECTO-BMW.jpg" alt="" />
-                </div>
-            </div>
-            <!-- close gallery item -->
-
-            <!-- gallery item -->
-            <div class="item residential" style="max-height: 270px; cursor: pointer;">
-                <div class="picframe">
-                    <a data-toggle="modal" data-target="#modalProjects" onclick="setProject('wallmart')">
-                        <span class="overlay">
-                            <span class="pf_text">
-                                <span class="project-name">Wallmart</span>
-                            </span>
-                        </span>
-                    </a>
-                    <img src="<?php bloginfo('template_url'); ?>/images/projects/PROYECTO-WALMART.jpg" alt="" />
-                </div>
-            </div>
-            <!-- close gallery item -->
-
-            <!-- gallery item -->
-            <div class="item office education" style="max-height: 270px; cursor: pointer;">
-                <div class="picframe">
-                    <a data-toggle="modal" data-target="#modalProjects" onclick="setProject('gmc')">
-                        <span class="overlay">
-                            <span class="pf_text">
-                                <span class="project-name">GMC</span>
-                            </span>
-                        </span>
-                    </a>
-
-                    <img src="<?php bloginfo('template_url'); ?>/images/projects/PROYECTO-GMC.jpg" alt="" />
-                </div>
-            </div>
-            <!-- close gallery item -->
-            
-
         </div>
 
     </section>
